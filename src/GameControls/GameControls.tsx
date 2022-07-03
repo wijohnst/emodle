@@ -4,12 +4,16 @@ import { AnswerInput, SubmitButton } from "./GameControls.style";
 type Props = {};
 
 const GameControls = (props: Props) => {
-  const [answer, setAnswer] = React.useState<string | undefined>(undefined);
+  const [answer, setAnswer] = React.useState<string | undefined>("");
+
+  const isDisabled = React.useMemo(() => {
+    return answer === "";
+  }, [answer]);
 
   const handleChange = (
     event: React.SyntheticEvent<HTMLInputElement>
   ): void => {
-    console.log(event.currentTarget.value);
+    setAnswer(event.currentTarget.value);
   };
   return (
     <>
@@ -22,7 +26,8 @@ const GameControls = (props: Props) => {
       <SubmitButton
         type="submit"
         name="submit"
-        isDisabled={answer === undefined}
+        isDisabled={isDisabled}
+        onClick={() => (isDisabled ? {} : console.log("Submission!"))}
       />
     </>
   );

@@ -2,7 +2,6 @@
 import styled from "styled-components";
 
 export const AppWrapper = styled.div`
-  background-color: lightpink;
   height: 100%;
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -13,7 +12,6 @@ export const AppHeading = styled.h1`
 `;
 
 export const DisplayControlsWrapper = styled.div`
-  background-color: lightgrey;
   display: flex;
   flex-direction: column;
 `;
@@ -28,7 +26,6 @@ export const NamesDisplayWrapper = styled.div`
 `;
 
 export const GameControlsWrapper = styled.div`
-  background-color: lightpink;
   display: flex;
   flex-direction: row;
   jusitfy-content: center;
