@@ -9,6 +9,8 @@ export const AppWrapper = styled.div`
 
 export const AppHeading = styled.h1`
   font-size: clamp(1rem, 1.5rem, 2em);
+  text-align: center;
+  text-decoration-line: underline;
 `;
 
 export const DisplayControlsWrapper = styled.div`
@@ -16,13 +18,16 @@ export const DisplayControlsWrapper = styled.div`
   flex-direction: column;
 `;
 export const NamesPanelWrapper = styled.div`
-  background-color: lightgreen;
   overflow: scroll;
+  border: solid thin black;
 `;
 
 export const NamesDisplayWrapper = styled.div`
-  background-color: lightblue;
   flex-grow: 1;
+  display: flex;
+  jusitfy-content: center;
+  align-items: center;
+  padding: 0 1rem 3rem 0.25rem;
 `;
 
 export const GameControlsWrapper = styled.div`

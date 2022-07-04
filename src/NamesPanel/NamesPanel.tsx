@@ -1,11 +1,27 @@
-import React from 'react'
+import React from "react";
+import { useAppSelector } from "../app/hooks";
 
-type Props = {}
+import { selectCorrectlyAnsweredNames } from "../features/game/gameSlice";
+
+import {
+  NamesPanelName,
+  NamesPanelWrapper,
+  NamesPannelHeader,
+} from "./NamesPanel.style";
+
+type Props = {};
 
 const NamesPanel = (props: Props) => {
-	return (
-		<div>NamesPanel</div>
-	)
-}
+  const correctlyAnsweredNames = useAppSelector(selectCorrectlyAnsweredNames);
+
+  return (
+    <NamesPanelWrapper>
+      <NamesPannelHeader>Correct Names</NamesPannelHeader>
+      {correctlyAnsweredNames?.map((name: string) => (
+        <NamesPanelName>{name}</NamesPanelName>
+      ))}
+    </NamesPanelWrapper>
+  );
+};
 
 export default NamesPanel;

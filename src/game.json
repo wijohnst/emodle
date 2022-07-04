@@ -3,8 +3,14 @@
 			{
 				"firstName" : "Will",
 				"lastName" : "Johnston",
-				"firstGlyph" : "🎡",
+				"firstGlyph" : "🎡 ",
 				"lastGlyph" : "🚽🥌"
+			},
+			{
+				"firstName" : "Haley",
+				"lastName" : "Hendershot",
+				"firstGlyph" : "👋🍁",
+				"lastGlyph" : "🐔🦌💉"
 			}
 		]
 }
