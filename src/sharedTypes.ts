@@ -1,4 +1,4 @@
-interface Name {
+export interface Name {
   firstName: string;
   lastName: string;
   firstGlyph: string;
