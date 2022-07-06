@@ -25,4 +25,7 @@ export const Lifeline = styled.button<{
   border-radius: 10px;
   box-shadow: ${(props) =>
     props.isUsed ? "none" : "2px 2px 7px rgba(0,0,0,.75)"};
+  &:hover {
+    cursor: pointer;
+  }
 `;

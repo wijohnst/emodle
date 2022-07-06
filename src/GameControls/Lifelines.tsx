@@ -8,6 +8,7 @@ import {
   updateLifelinesUsed,
   updateIs5050selected,
   updateIsTitleLocationSelected,
+  updateIsAllNamesModalShown,
 } from "../features/game/gameSlice";
 
 type Props = {};
@@ -34,6 +35,12 @@ const Lifelines = (props: Props) => {
   return (
     <LifelinesWrapper>
       <span>Lifelines:</span>
+      <Lifeline
+        isUsed={false}
+        onClick={() => dispatch(updateIsAllNamesModalShown(true))}
+      >
+        See all names
+      </Lifeline>
       <Lifeline
         isUsed={lifelinesUsed.includes(LifelinesTextEnum.PHONE)}
         onClick={() =>

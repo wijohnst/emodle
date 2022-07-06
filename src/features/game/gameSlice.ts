@@ -1,6 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { RootState } from "../../app/store";
-import { CurrentQuestionStatus } from "../../sharedTypes";
+import { CurrentQuestionStatus, Name } from "../../sharedTypes";
+
+import GameData from "../../game.json";
+import { getShuffledNames } from "../../utils";
 export interface GameState {
   currentQuestionIndex: number;
   currentQuestionStatus: CurrentQuestionStatus | null;
@@ -10,6 +13,7 @@ export interface GameState {
   lifelinesUsed: string[];
   is5050Selected: boolean;
   isTitleLocationSelected: boolean;
+  isAllNamesModalShown: boolean;
 }
 
 const initialState: GameState = {
@@ -21,6 +25,7 @@ const initialState: GameState = {
   lifelinesUsed: [],
   is5050Selected: false,
   isTitleLocationSelected: false,
+  isAllNamesModalShown: false,
 };
 
 export const gameSlice = createSlice({
@@ -54,6 +59,9 @@ export const gameSlice = createSlice({
     updateIsTitleLocationSelected: (state, action) => {
       state.isTitleLocationSelected = action.payload;
     },
+    updateIsAllNamesModalShown: (state, action) => {
+      state.isAllNamesModalShown = action.payload;
+    },
   },
 });
 
@@ -67,6 +75,7 @@ export const {
   updateLifelinesUsed,
   updateIs5050selected,
   updateIsTitleLocationSelected,
+  updateIsAllNamesModalShown,
 } = gameSlice.actions;
 
 export const selectCurrentQuestionIndex = (state: RootState) =>
@@ -92,5 +101,8 @@ export const selectIs5050selected = (state: RootState) =>
 
 export const selectIsTitleLocationSelected = (state: RootState) =>
   state.game.isTitleLocationSelected;
+
+export const selectIsAllNamesModalShown = (state: RootState) =>
+  state.game.isAllNamesModalShown;
 
 export default gameSlice.reducer;
