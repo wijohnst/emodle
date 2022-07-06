@@ -3,6 +3,7 @@ export interface Name {
   lastName: string;
   firstGlyph: string;
   lastGlyph: string;
+  title: string;
 }
 
 export interface Game {
