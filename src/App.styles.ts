@@ -35,3 +35,11 @@ export const NamesDisplayWrapper = styled.div`
 export const GameControlsWrapper = styled.div`
   padding: 0 1rem 3rem 0.25rem;
 `;
+
+export const Subheading = styled.div`
+  font-size: 0.33rem;
+  position: relative;
+  top: -0.5rem;
+  text-align: center;
+  padding: 0 1.5rem 0 1.5rem;
+`;

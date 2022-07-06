@@ -20,6 +20,7 @@ import {
   DisplayControlsWrapper,
   GameControlsWrapper,
   AppHeading,
+  Subheading,
 } from "./App.styles";
 
 import GameData from "./game.json";
@@ -36,7 +37,13 @@ const App = (props: Props) => {
   return (
     <AppWrapper>
       <NamesPanelWrapper>
-        <AppHeading> Guess The Name</AppHeading>
+        <AppHeading> EMODLE </AppHeading>
+        <Subheading>
+          <p>
+            Learn your coworkers' names by associating them with a serires of
+            increasingly obscure emoji-glyphs.
+          </p>
+        </Subheading>
         <NamesPanel />
       </NamesPanelWrapper>
       <DisplayControlsWrapper>
