@@ -12,9 +12,7 @@ const LastScreen = (props: Props) => {
   const allEmojis = getAllEmojis(GameData.names);
   return (
     <>
-      {allEmojis.map((emoji) => (
-        <FallingEmojis emoji={emoji} />
-      ))}
+      <FallingEmojis emoji="🎉" />
     </>
   );
 };
