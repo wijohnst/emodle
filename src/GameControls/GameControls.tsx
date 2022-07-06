@@ -60,6 +60,7 @@ const GameControls = (props: Props) => {
   const handleChange = (
     event: React.SyntheticEvent<HTMLInputElement>
   ): void => {
+    isIncorrect && event.currentTarget.value === "" && handleReset();
     setAnswer(event.currentTarget.value);
   };
 
