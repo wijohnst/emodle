@@ -60,7 +60,7 @@ const GameControls = (props: Props) => {
   const handleChange = (
     event: React.SyntheticEvent<HTMLInputElement>
   ): void => {
-    isIncorrect && event.currentTarget.value === "" && handleReset();
+    isIncorrect && event.currentTarget.value === "" && handleReset(false);
     setAnswer(event.currentTarget.value);
   };
 
@@ -75,17 +75,19 @@ const GameControls = (props: Props) => {
     }
   };
 
-  const handleReset = (): void => {
+  const handleReset = (isNext: boolean): void => {
     setIsCorrect(false);
     setIsIncorrect(false);
     setAnswer("");
     dispatch(resetCurrentQuestionStatus());
-    dispatch(updateIs5050selected(false));
-    dispatch(updateIsTitleLocationSelected(false));
+    if (isNext) {
+      dispatch(updateIs5050selected(false));
+      dispatch(updateIsTitleLocationSelected(false));
+    }
   };
 
   const handleNext = (): void => {
-    handleReset();
+    handleReset(true);
     dispatch(incrementCurrentQuestionIndex());
   };
 
@@ -124,7 +126,7 @@ const GameControls = (props: Props) => {
           <OtherButton onClick={() => handleNext()}>Next? </OtherButton>
         )}
         {isIncorrect && (
-          <OtherButton onClick={() => handleReset()}>Reset?</OtherButton>
+          <OtherButton onClick={() => handleReset(false)}>Reset?</OtherButton>
         )}
         {isCorrect && numberOfNames - 1 === currentQuestionIndex && (
           <OtherButton onClick={() => dispatch(updateShouldShowLastScreen())}>
