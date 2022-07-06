@@ -15,6 +15,7 @@ import {
   TitleSpan,
   Subheading,
   Heading,
+  EndingNote,
 } from "./LastScreen.style";
 
 type Props = {};
@@ -38,6 +39,10 @@ const LastScreen = (props: Props) => {
           </NameItem>
         ))}
       </NamesList>
+      <EndingNote>
+        Andrew, We are so happy to have you on the team! We know you're going to
+        do big things! - The Modern Apps UX Practice
+      </EndingNote>
     </LastScreenWrapper>
   );
 };

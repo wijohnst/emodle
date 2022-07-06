@@ -7,6 +7,9 @@ export interface GameState {
   correctlyAnsweredNames: string[];
   isLastQuestion: boolean;
   shouldShowEndScreen: boolean;
+  lifelinesUsed: string[];
+  is5050Selected: boolean;
+  isTitleLocationSelected: boolean;
 }
 
 const initialState: GameState = {
@@ -15,6 +18,9 @@ const initialState: GameState = {
   correctlyAnsweredNames: [],
   isLastQuestion: false,
   shouldShowEndScreen: false,
+  lifelinesUsed: [],
+  is5050Selected: false,
+  isTitleLocationSelected: false,
 };
 
 export const gameSlice = createSlice({
@@ -39,6 +45,15 @@ export const gameSlice = createSlice({
     updateShouldShowLastScreen: (state) => {
       state.shouldShowEndScreen = !state.shouldShowEndScreen;
     },
+    updateLifelinesUsed: (state, action) => {
+      state.lifelinesUsed.push(action.payload);
+    },
+    updateIs5050selected: (state, action) => {
+      state.is5050Selected = action.payload;
+    },
+    updateIsTitleLocationSelected: (state, action) => {
+      state.isTitleLocationSelected = action.payload;
+    },
   },
 });
 
@@ -49,6 +64,9 @@ export const {
   incrementCurrentQuestionIndex,
   updateIsLastQuestion,
   updateShouldShowLastScreen,
+  updateLifelinesUsed,
+  updateIs5050selected,
+  updateIsTitleLocationSelected,
 } = gameSlice.actions;
 
 export const selectCurrentQuestionIndex = (state: RootState) =>
@@ -65,5 +83,14 @@ export const selectIsLastQuestion = (state: RootState) =>
 
 export const selectShouldShowLastScreen = (state: RootState) =>
   state.game.shouldShowEndScreen;
+
+export const selectLifelinesUsed = (state: RootState) =>
+  state.game.lifelinesUsed;
+
+export const selectIs5050selected = (state: RootState) =>
+  state.game.is5050Selected;
+
+export const selectIsTitleLocationSelected = (state: RootState) =>
+  state.game.isTitleLocationSelected;
 
 export default gameSlice.reducer;

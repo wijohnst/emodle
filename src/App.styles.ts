@@ -1,4 +1,5 @@
 // Global Imports
+import { executeReducerBuilderCallback } from "@reduxjs/toolkit/dist/mapBuilders";
 import styled from "styled-components";
 
 export const AppWrapper = styled.div`
@@ -19,7 +20,9 @@ export const DisplayControlsWrapper = styled.div`
 `;
 export const NamesPanelWrapper = styled.div`
   overflow: scroll;
-  border: solid thin black;
+  background-color: #d40e8c;
+  color: white;
+  border-right: solid black;
 `;
 
 export const NamesDisplayWrapper = styled.div`
@@ -27,13 +30,8 @@ export const NamesDisplayWrapper = styled.div`
   display: flex;
   jusitfy-content: center;
   align-items: center;
-  padding: 0 1rem 3rem 0.25rem;
 `;
 
 export const GameControlsWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  jusitfy-content: center;
-  align-items: center;
   padding: 0 1rem 3rem 0.25rem;
 `;

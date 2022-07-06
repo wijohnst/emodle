@@ -1,5 +1,13 @@
 import React from "react";
-import { AnswerInput, SubmitButton, OtherButton } from "./GameControls.style";
+import {
+  AnswerInput,
+  SubmitButton,
+  OtherButton,
+  FiftyFiftyLifeline,
+  AnswerSubmit,
+  LifelineName,
+  Title,
+} from "./GameControls.style";
 
 import { useAppSelector, useAppDispatch } from "../app/hooks";
 
@@ -10,6 +18,11 @@ import {
   addCorrectlyAnsweredName,
   incrementCurrentQuestionIndex,
   updateShouldShowLastScreen,
+  selectIs5050selected,
+  updateIs5050selected,
+  selectCorrectlyAnsweredNames,
+  selectIsTitleLocationSelected,
+  updateIsTitleLocationSelected,
 } from "../features/game/gameSlice";
 
 import { CurrentQuestionStatus } from "../sharedTypes";
@@ -26,6 +39,9 @@ const GameControls = (props: Props) => {
   const [isIncorrect, setIsIncorrect] = React.useState(false);
 
   const currentQuestionIndex = useAppSelector(selectCurrentQuestionIndex);
+  const is5050Selected = useAppSelector(selectIs5050selected);
+  const isTitleLocationSelected = useAppSelector(selectIsTitleLocationSelected);
+  const answeredNames = useAppSelector(selectCorrectlyAnsweredNames);
 
   const isDisabled = React.useMemo(() => {
     return answer === "";
@@ -63,6 +79,8 @@ const GameControls = (props: Props) => {
     setIsIncorrect(false);
     setAnswer("");
     dispatch(resetCurrentQuestionStatus());
+    dispatch(updateIs5050selected(false));
+    dispatch(updateIsTitleLocationSelected(false));
   };
 
   const handleNext = (): void => {
@@ -70,33 +88,60 @@ const GameControls = (props: Props) => {
     dispatch(incrementCurrentQuestionIndex());
   };
 
+  const getRandomName = (): string => {
+    const correctName = `${GameData.names[currentQuestionIndex].firstName} ${GameData.names[currentQuestionIndex].lastName}`;
+    const incorrectNames = GameData.names.filter((name) => {
+      return (
+        `${name.firstName} ${name.lastName}` !== correctName &&
+        !answeredNames.includes(`${name.firstName} ${name.lastName}`)
+      );
+    });
+
+    return `${incorrectNames[incorrectNames.length - 1].firstName} ${
+      incorrectNames[incorrectNames.length - 1].lastName
+    }`;
+  };
+
   return (
     <>
-      <AnswerInput
-        type="text"
-        name="answer"
-        onChange={(event) => handleChange(event)}
-        value={answer}
-      />
-      {!isCorrect && !isIncorrect && (
-        <SubmitButton
-          type="submit"
-          name="submit"
-          isDisabled={isDisabled}
-          onClick={() => (isDisabled ? {} : handleSubmit())}
+      <AnswerSubmit>
+        <AnswerInput
+          type="text"
+          name="answer"
+          onChange={(event) => handleChange(event)}
+          value={answer}
         />
+        {!isCorrect && !isIncorrect && (
+          <SubmitButton
+            type="submit"
+            name="submit"
+            isDisabled={isDisabled}
+            onClick={() => (isDisabled ? {} : handleSubmit())}
+          />
+        )}
+        {isCorrect && numberOfNames - 1 > currentQuestionIndex && (
+          <OtherButton onClick={() => handleNext()}>Next? </OtherButton>
+        )}
+        {isIncorrect && (
+          <OtherButton onClick={() => handleReset()}>Reset?</OtherButton>
+        )}
+        {isCorrect && numberOfNames - 1 === currentQuestionIndex && (
+          <OtherButton onClick={() => dispatch(updateShouldShowLastScreen())}>
+            {" "}
+            Finish?{" "}
+          </OtherButton>
+        )}
+      </AnswerSubmit>
+      {is5050Selected && (
+        <FiftyFiftyLifeline>
+          <LifelineName>{`${GameData.names[currentQuestionIndex].firstName} ${GameData.names[currentQuestionIndex].lastName}`}</LifelineName>
+          <LifelineName>{getRandomName()}</LifelineName>
+        </FiftyFiftyLifeline>
       )}
-      {isCorrect && numberOfNames - 1 > currentQuestionIndex && (
-        <OtherButton onClick={() => handleNext()}>Next? </OtherButton>
-      )}
-      {isIncorrect && (
-        <OtherButton onClick={() => handleReset()}>Reset?</OtherButton>
-      )}
-      {isCorrect && numberOfNames - 1 === currentQuestionIndex && (
-        <OtherButton onClick={() => dispatch(updateShouldShowLastScreen())}>
-          {" "}
-          Finish?{" "}
-        </OtherButton>
+      {isTitleLocationSelected && (
+        <FiftyFiftyLifeline>
+          <Title>{`${GameData.names[currentQuestionIndex].title}`}</Title>
+        </FiftyFiftyLifeline>
       )}
     </>
   );

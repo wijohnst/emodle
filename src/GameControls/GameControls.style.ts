@@ -35,3 +35,23 @@ export const OtherButton = styled.button`
     cursor: pointer;
   }
 `;
+
+export const FiftyFiftyLifeline = styled.div`
+  margin: 1rem 0 0 0;
+  display: flex;
+  flex-direction: row;
+  jusitfy-content: center;
+  align-items: center;
+`;
+
+export const AnswerSubmit = styled.div`
+  display: flex;
+  jusitfy-content: center;
+  align-items: center;
+`;
+
+export const LifelineName = styled.span`
+  margin: 0 1rem 0 1rem;
+`;
+
+export const Title = styled.span``;
