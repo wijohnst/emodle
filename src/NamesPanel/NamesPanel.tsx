@@ -16,7 +16,7 @@ const NamesPanel = (props: Props) => {
 
   return (
     <NamesPanelWrapper>
-      <NamesPannelHeader>Correct Names</NamesPannelHeader>
+      <NamesPannelHeader>Correct Guesses</NamesPannelHeader>
       {correctlyAnsweredNames?.map((name: string) => (
         <NamesPanelName>{name}</NamesPanelName>
       ))}
