@@ -69,7 +69,7 @@ const Lifelines = (props: Props) => {
             : handleTitleLocationClick()
         }
       >
-        Title & Location
+        Title
       </Lifeline>
     </LifelinesWrapper>
   );
