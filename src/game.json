@@ -1,144 +1,67 @@
 {
   "names": [
     {
-      "firstName": "Andrew",
-      "lastName": "Taylor",
-      "firstGlyph": "🐜✍️",
-      "lastGlyph": "🧵🪡",
-      "title": "Associate Software Engineer, Boalsburgh, PA"
-    },
-    {
       "firstName": "Will",
       "lastName": "Johnston",
       "firstGlyph": "🎡 ",
       "lastGlyph": "🚽🥌",
-      "title": "Software Engineer, Columbus, OH"
-    },
-    {
-      "firstName": "Haley",
-      "lastName": "Hendershot",
-      "firstGlyph": "👋🍁",
-      "lastGlyph": "🐔🦌💉",
-      "title": "Sr. Software Engineer, Columbus, OH"
-    },
-    {
-      "firstName": "Marko",
-      "lastName": "Skugor",
-      "firstGlyph": "✅oh",
-      "lastGlyph": "🛴",
-      "title": "Practice Manager, Modern Apps UX Practice, Columbus, OH"
-    },
-    {
-      "firstName": "Jennifer",
-      "lastName": "Dougher",
-      "firstGlyph": "👖e🌲",
-      "lastGlyph": "💰er",
-      "title": "Software Engineer, Columbus, OH"
-    },
-    {
-      "firstName": "Rochelle",
-      "lastName": "Taylor",
-      "firstGlyph": "🚣🐚",
-      "lastGlyph": "🧵🪡",
-      "title": "Associate Software Engineer, Columbus, OH"
-    },
-    {
-      "firstName": "Kristy",
-      "lastName": "Graybill",
-      "firstGlyph": "🚗wrist🫖",
-      "lastGlyph": "⚫️+⚪️🧾",
-      "title": "Software Engineer, Philadelphia, PA"
-    },
-    {
-      "firstName": "Shane",
-      "lastName": "Mccleery",
-      "firstGlyph": "🤫ane",
-      "lastGlyph": "M🆑👂e",
-      "title": "Sr. Software Engineer, Columbus, OH"
-    },
-    {
-      "firstName": "Jonathan",
-      "lastName": "David",
-      "firstGlyph": "🚽athan",
-      "lastGlyph": "👑🇮🇱",
-      "title": "Sr. Sofrware Engineer, Columbus, OH"
-    },
-    {
-      "firstName": "Joel",
-      "lastName": "Treadway",
-      "firstGlyph": "☕️l",
-      "lastGlyph": "🚶‍♂️way",
-      "title": "Sr. Software Engineer, Columbus, OH"
+      "title": "Software Engineer"
     },
     {
       "firstName": "Gerrod",
       "lastName": "Schirtzinger",
       "firstGlyph": "G🎣",
       "lastGlyph": "👕😴inger",
-      "title": "Sr. Sofrware Engineer, Grand Rapids, MI"
+      "title": "Sr. Sofrware Engineer"
     },
     {
-      "firstName": "Kevin",
-      "lastName": "Mccartney",
-      "firstGlyph": "K🚐",
-      "lastGlyph": "Mc❤️🦵",
-      "title": "Sr. Software Engineer, Columbus, OH"
+      "firstName": "Valli",
+      "lastName": "Lakshmanan",
+      "firstGlyph": "⛰👇⛰",
+      "lastGlyph": "🔒🤫👨‍🦰🔛",
+      "title": "Software Engineer"
     },
     {
-      "firstName": "Aaron",
-      "lastName": "Ibrahim",
-      "firstGlyph": "🅰️🅰️🥩n",
-      "lastGlyph": "Eb🥩him",
-      "title": "Principle Software Engineer, Columbus, OH"
+      "firstName": "Sean",
+      "lastName": "Pino",
+      "firstGlyph": "🌊🔛",
+      "lastGlyph": "🍷",
+      "title": "Sr. Software Engineer"
     },
     {
-      "firstName": "Brian",
-      "lastName": "Riazzi",
-      "firstGlyph": "Br☢️",
-      "lastGlyph": "Re🍑e",
-      "title": "Software Engineer, Columbus, OH"
+      "firstName": "Kenny",
+      "lastName": "Drobnack",
+      "firstGlyph": " K🦵👈",
+      "lastGlyph": "✍️b👉🦒",
+      "title": "Sr. Software Engineer"
     },
     {
-      "firstName": "Nick",
-      "lastName": "Roush",
-      "firstGlyph": "🎅🏻(🙅🏾‍♀️'saint')",
-      "lastGlyph": "🚣‍♀️🤫",
-      "title": "Associate Software Engineer, Pittsburgh, PA"
+      "firstName": "Scott",
+      "lastName": "Johnson",
+      "firstGlyph": "🛴(minus “-er”)",
+      "lastGlyph": "🚽👨‍👦",
+      "title": "Engineering Manager"
     },
     {
-      "firstName": "Kara",
-      "lastName": "Lam",
-      "firstGlyph": "🚗🅰️",
-      "lastGlyph": "🐑",
-      "title": "Sr. Software Engineer, Columbus, OH"
+      "firstName": "John",
+      "lastName": "Brawner",
+      "firstGlyph": "🚽",
+      "lastGlyph": "💪(plus -“er”)",
+      "title": "Product Manager"
     },
     {
-      "firstName": "Andrew",
-      "lastName": "Fisher",
-      "firstGlyph": "🐜✍️",
-      "lastGlyph": "🐡er",
-      "title": "Sr. Software Engineer, Columbus, OH"
+      "firstName": "Prabhdeep",
+      "lastName": "Singh",
+      "firstGlyph": "P🥩(🪔 minus “-ya”)p",
+      "lastGlyph": "🎤🎶",
+      "title": "Sr. Software Engineer"
     },
     {
-      "firstName": "Ben",
-      "lastName": "Pappalardo",
-      "firstGlyph": "🐝n",
-      "lastGlyph": "👴lar🍞",
-      "title": "Sr. Software Engineer, Columbus, OH"
-    },
-    {
-      "firstName": "Brandon",
-      "lastName": "Mullins",
-      "firstGlyph": "🐝🏃‍♀️on",
-      "lastGlyph": "🐄🔎",
-      "title": "Sr. Software Engineer, Columbus, OH"
-    },
-    {
-      "firstName": "Sarah",
-      "lastName": "Kahley",
-      "firstGlyph": "🪚🥩",
-      "lastGlyph": "C🅰️🍁",
-      "title": "Practice Manager, Modern Apps UX Practice, Columbus, OH"
+      "firstName": "Jon",
+      "lastName": "Ivory",
+      "firstGlyph": "🚽",
+      "lastGlyph": "🐘",
+      "title": "Opps Dude"
     }
   ]
 }
